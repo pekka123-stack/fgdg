@@ -1,0 +1,6 @@
+-- Hooking into game logic
+local oldFunc = game.SomeModule.SomeFunction
+game.SomeModule.SomeFunction = function(...)
+    print("Intercepted!")
+    return oldFunc(...)
+end
